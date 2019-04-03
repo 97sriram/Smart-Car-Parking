@@ -1,0 +1,36 @@
+<?php
+
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+
+
+$response = array();
+$smart = array();
+$resp=array();
+
+ 
+$filepath = realpath (dirname(__FILE__));
+require_once($filepath."/dbconnect.php");
+
+$db = new DB_CONNECT();	
+ 
+$result = mysql_query("SELECT * FROM slotrfid") or die(mysql_error());
+
+$dbconnect = mysqli_connect($server, $dbusername, $dbpassword);
+    $dbselect = mysqli_select_db($dbconnect, "request");
+
+	$sql="SELECT request FROM request";
+
+	$records=mysqli_query($dbconnect,$sql);
+	$json_array=array();
+	
+	while($row=mysqli_fetch_assoc($records))
+	{
+		$json_array[]=$row;
+		
+	}
+		/*echo '<pre>';
+		print_r($json_array);
+		echo '</pre>';*/
+	echo json_encode($json_array);
+?>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sri.com.smartcar.MainActivity">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slot1"
+        android:id="@+id/s1"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/but"
+        android:layout_marginTop="51dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slot2"
+        android:id="@+id/s2"
+        android:layout_alignTop="@+id/s1"
+        android:layout_toEndOf="@+id/but" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parking"
+        android:id="@+id/but"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/iv1"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/iv1"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/s1"
+        android:layout_alignEnd="@+id/s1" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/iv2"
+        android:layout_alignTop="@+id/iv1"
+        android:layout_alignEnd="@+id/s2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to VIT Parking System"
+        android:textSize="22.5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parked"
+        android:id="@+id/bt2"
+        android:layout_below="@+id/but"
+        android:layout_alignStart="@+id/iv1"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reserve SLOT 2"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/bt2"
+        android:layout_alignEnd="@+id/textView" />
+
+
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/but"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tv"
+            android:textSize="20sp"
+            android:hint="Text"/>
+
+
+
+    </ScrollView>-->
+
+
+
+
+
+</RelativeLayout>
